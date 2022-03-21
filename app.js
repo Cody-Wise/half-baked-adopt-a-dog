@@ -27,7 +27,6 @@ searchButtonEl.addEventListener('click', async() => {
     const name = dogInputEl.value;
     
     const dogResponse = await searchDogs(name);
-  console.log(dogResponse);
     // window.location.href = `./detail/?name=${name}`;
 
     const dogsEl = renderDogCard(dogResponse);
