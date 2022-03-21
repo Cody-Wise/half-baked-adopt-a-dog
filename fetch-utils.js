@@ -25,14 +25,14 @@ export async function getDog(id) {
         .match({ id: id })
         .single();
 
-    return response.body;
+    // return response.body;
 
     // from the dogs table, select a single dog who has the matching id
 
     // and return the response (checking for errors)
-    // return checkError(response);    
+    return checkError(response);    
 }
 
-// function checkError({ data, error }) {
-//     return error ? console.error(error) : data;
-// }
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
