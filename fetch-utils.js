@@ -33,6 +33,26 @@ export async function getDog(id) {
     return checkError(response);    
 }
 
+export async function searchDogs(name){
+
+    // const response = await client
+    //     .from('dogs')
+    //     .select('name')
+    //     .eq('id', searchQuery)    // Correct
+    //     .execute();
+
+    const response = await client
+        .from('dogs')
+        .select('*')
+        .eq('name', name)
+        .single();
+        // .textSearch('name', searchQuery)
+
+    return checkError(response);
+
+}
+
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
