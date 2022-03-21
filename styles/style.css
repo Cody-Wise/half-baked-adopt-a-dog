@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-image: url('../assets/bg.png');
+    background-image: url('../assets/dog-bone-bg.jpg');
     background-size: 600px;
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -55,7 +55,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: orange;
+    background-color: rgb(197, 48, 172);
     height: var(--header-height);
     box-shadow: var(--shadow);
     height: 100%;
@@ -94,6 +94,7 @@ p {
 .dog-card {
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: fantasy;
     padding: 10px;
     margin: 10px;
     display: flex;
