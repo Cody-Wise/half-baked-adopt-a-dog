@@ -43,9 +43,9 @@ export async function searchDogs(name){
 
     const response = await client
         .from('dogs')
-        .select('name, breed')
-        .eq('name', name)
-        // .or(`name.eq.${name},breed.eq.${name}`);
+        .select('*')
+        // .eq('name', name)
+        .or(`name.eq.${name},breed.eq.${name}`)
 
         .single();
         // .textSearch('name', searchQuery)
